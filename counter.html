@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter</title>
+<style>
+/*<!--GENERAL STYLINGS-->*/
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    margin: 3rem;
+    background-color: #dfdfdf;
+  }
+  h1 {
+    color: #333333;
+  }
+/*<!--GENERAL STYLINGS-->*/
+
+/*<!--PASSENGER COUNT STYLINGS-->*/
+  .box {
+    border-radius: 10px;
+    border: black;
+    background-color: rgb(253, 253, 253);
+    padding: 10px;
+    margin: 0 10% 0 10%;
+    text-align: center;
+  }
+  #increment-btn, #color-btn, .save-btn{
+    background-color: rgb(141, 88, 88);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: seashell;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+/*<!--PASSENGER COUNT STYLINGS-->*/
+/*<!--CODE STYLINGS-->*/
+  #code{
+    margin-left: 10%;
+    background-color: black;
+    color: white;
+    width: 80%;
+    height: 350px;
+    overflow: scroll;
+    border-radius: 10px;
+}
+/*<!--CODE STYLINGS-->*/
+
+</style>
+</head>
+
+<body id="body">
+  <div class="box">
+    <!-- PASSENGER COUNTER START-->
+      <h1>people entered:</h1>
+      <h1 id="count">0</h1>
+      <button id="increment-btn">INCREMENT</button>
+    <!--PASSENGER COUNTER END-->
+
+    <!-- PASSENGER SAVE BUTTON-->
+      <button id="save-btn" class="save-btn">SAVE</button>
+      <h4>previous saving: <span id="saved">-</span> </h4>
+    <!-- PASSENGER SAVE BUTTON-->
+    </div>
+    <h4 style="text-align: center; color:red;">code snippet:</h4>
+
+    <div id="code" onscroll="scroll()">
+    <pre>
+        <code>
+                    &#x3C;!DOCTYPE html&#x3E;
+                    &#x3C;html lang=&#x22;en&#x22;&#x3E;
+
+                    &#x3C;head&#x3E;
+                    &#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
+                    &#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;IE=edge&#x22;&#x3E;
+                    &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0&#x22;&#x3E;
+                    &#x3C;title&#x3E;Counter&#x3C;/title&#x3E;
+                    &#x3C;style&#x3E;
+                    /*&#x3C;!--GENERAL STYLINGS--&#x3E;*/
+                    * {
+                        box-sizing: border-box;
+                    }
+                    
+                    body {
+                        font-family: sans-serif;
+                        margin: 3rem;
+                        background-color: #dfdfdf;
+                    }
+                    h1 {
+                        color: #333333;
+                    }
+                    /*&#x3C;!--GENERAL STYLINGS--&#x3E;*/
+
+                    /*&#x3C;!--PASSENGER COUNT STYLINGS--&#x3E;*/
+                    .box {
+                        border-radius: 10px;
+                        border: black;
+                        background-color: rgb(253, 253, 253);
+                        padding: 10px;
+                        margin: 0 20% 0 20%;
+                        text-align: center;
+                    }
+                    #increment-btn, #color-btn, .save-btn{
+                        background-color: rgb(141, 88, 88);
+                        padding: 10px;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        color: seashell;
+                        margin-bottom: 10px;
+                        margin-right: 10px;
+                    }
+                    /*&#x3C;!--PASSENGER COUNT STYLINGS--&#x3E;*/
+                    &#x3C;/style&#x3E;
+                    &#x3C;/head&#x3E;
+
+                    &#x3C;body id=&#x22;body&#x22;&#x3E;
+                    &#x3C;div class=&#x22;box&#x22;&#x3E;
+                        &#x3C;!-- PASSENGER COUNTER START--&#x3E;
+                        &#x3C;h1&#x3E;people entered:&#x3C;/h1&#x3E;
+                        &#x3C;h1 id=&#x22;count&#x22;&#x3E;0&#x3C;/h1&#x3E;
+                        &#x3C;button id=&#x22;increment-btn&#x22;&#x3E;INCREMENT&#x3C;/button&#x3E;
+                        &#x3C;!--PASSENGER COUNTER END--&#x3E;
+
+                        &#x3C;!-- PASSENGER SAVE BUTTON--&#x3E;
+                        &#x3C;button id=&#x22;save-btn&#x22; class=&#x22;save-btn&#x22;&#x3E;SAVE&#x3C;/button&#x3E;
+                        &#x3C;h4&#x3E;previous saving: &#x3C;span id=&#x22;saved&#x22;&#x3E;-&#x3C;/span&#x3E; &#x3C;/h4&#x3E;
+                        &#x3C;!-- PASSENGER SAVE BUTTON--&#x3E;
+                        &#x3C;/div&#x3E;
+                    &#x3C;script&#x3E;
+                    var incrementBtn = document.getElementById(&#x22;increment-btn&#x22;);
+                    let people = 0;
+                    incrementBtn.onclick = function () {
+                        people = people + 1;
+                        document.getElementById(&#x22;count&#x22;).innerHTML = people
+                    };
+                    // ---------------------------PASSENGER COUNT JAVASCRIPT
+
+                    //---------------------------------PASSENGER SAVE BUTTON
+                    var saveCount = document.getElementById(&#x22;save-btn&#x22;);
+                    saveCount.addEventListener(&#x27;click&#x27;,function(){
+                        document.getElementById(&#x22;saved&#x22;).innerHTML = people
+                    })
+                    //----------------------------------PASSENGER SAVE BUTTON
+                    &#x3C;/script&#x3E;
+                    &#x3C;/body&#x3E;
+
+                    &#x3C;/html&#x3E;
+                            </code>
+                        </pre>
+</div>
+<script>
+var incrementBtn = document.getElementById("increment-btn");
+let people = 0;
+incrementBtn.onclick = function () {
+    people = people + 1;
+    document.getElementById("count").innerHTML = people
+};
+// ---------------------------PASSENGER COUNT JAVASCRIPT
+
+//---------------------------------PASSENGER SAVE BUTTON
+var saveCount = document.getElementById("save-btn");
+saveCount.addEventListener('click',function(){
+    document.getElementById("saved").innerHTML = people
+})
+//----------------------------------PASSENGER SAVE BUTTON
+function scroll() {
+document.getElementById("code").style.color = "white";
+document.getElementById("code").style.background = "black";
+}
+</script>
+</body>
+
+</html>

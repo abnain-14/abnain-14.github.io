@@ -12,6 +12,7 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 			<link rel="stylesheet" href="css/style-noscript.css" />
+			<link rel="stylesheet" href="css/ie/v8.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
@@ -23,8 +24,9 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<a href="#me" class="icon fa-home active"></a>
-						<a href="#work" class="icon fa-folder"></a>
+						<a href="#shortintro" class="icon fa-folder"></a>
 						<a href="#contact" class="icon fa-envelope"></a>
+						<a href="#work" class="icon fa-pencil"></a>
 						<a href="https://github.com/abnain-14" class="icon fa-github"></a>
 					</nav>
 
@@ -38,8 +40,8 @@
 									<p> Frontend Developer</p>
 								</header>
 							</article>
-						<!-- Work --> 
-							<article id="work" class="panel">
+						<!-- short-intro --> 
+							<article id="shortintro" class="panel">
 								<header>
 									<h2>Short Introduction</h2>
 								</header>
@@ -50,12 +52,23 @@
 									Currently, I am self learning JS framework.(VUEjs). <br>
 									Simply put, I love tech stuffs!.
 								</p>
-								<!--my work
+							</article>
+							<article id="work" class="panel">
+								<header>
+									<h2>My Blog</h2>
+								</header>
+								<hr>
+								<p>
+									Just Posting some of the simplest Javascript projects to improve my knowledge in javascript.
+								</p>
+
+								<!--my work-->
 									<section>
 									<div class="row">
 										<div class="4u">
-											<a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
+											<a href="counter.html" class="image fit"><img src="images/pic01.png" alt="" title="simple counter"></a>
 										</div>
+										<!--
 										<div class="4u">
 											<a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
 										</div>
@@ -99,7 +112,6 @@
 								</section>
 							-->
 							</article>
-
 						<!-- Contact -->
 							<article id="contact" class="panel">
 								<header>
@@ -128,5 +140,6 @@
 			<script src="js/jquery.min.js"></script>
 			<script src="js/skel.min.js"></script>
 			<script src="js/init.js"></script>
+			<script src="css/ie/html5shiv.js"></script>
 	</body>
 </html>
